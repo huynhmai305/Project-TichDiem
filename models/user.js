@@ -12,6 +12,10 @@ const User = db.define('User',{
         allowNull: false,
         unique: false
       },
+       ngsinh: {
+         type: Sequelize.DATE,
+         allowNull: false
+       },
       address: {
         type: Sequelize.STRING(256),
         allowNull: true,
@@ -23,14 +27,14 @@ const User = db.define('User',{
         
       },
       email: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(256),
         allowNull: false,
         validate: {
           isEmail: true,
         },
       },
       password: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(256),
         allowNull: false,
       },
       role: {

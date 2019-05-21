@@ -1,7 +1,20 @@
 var React = require ('react');
 var DefaultLayout = require('../layouts/default');
 class Users extends React.Component {
+    // getConfirmation = () => {
+    //     val = confirm("Bạn chắc chắn muốn xóa không?");
+    //     if(val===true){
+    //         document.write("Bạn đã xóa");
+    //         return true;
+    //     }
+    //     else {
+    //         document.write("Bạn không muốn xóa");
+    //         return false;
+    //     }
+    // }
+    
     render() {
+       
         return (  
             <DefaultLayout title="Trang user">
                 <ol className="breadcrumb mt-5">
@@ -28,6 +41,11 @@ class Users extends React.Component {
                             <td>{item.address}</td>
                             <td>{item.phone}</td>
                             <td>{item.email}</td>
+                            <td>
+                                <button name="btnEdit" className="btn btn-info"  href="">Sửa</button>
+                                <button name="btnDelete" className="btn btn-danger" onClick="" href="">Xóa</button>
+                            </td>
+                           
                         </tr>
                     )}
                     </tbody>
@@ -36,5 +54,6 @@ class Users extends React.Component {
         );
     }
 }
+
 
 module.exports = Users;

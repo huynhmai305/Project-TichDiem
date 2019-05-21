@@ -1,5 +1,4 @@
 var React = require('react');
-import Navigation from './navigation';
 import Footer from './footer'
 class DefaultLayout extends React.Component {
     render() {
@@ -10,7 +9,7 @@ class DefaultLayout extends React.Component {
                     <meta charSet="utf-8"/>
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-                    <meta name="description" ></meta>
+                    <meta name="description"></meta>
                     <meta name="author"></meta>
                     <link rel="stylesheet" href="/stylesheets/css/bootstrap.css"/>
                     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css"/>
@@ -31,7 +30,6 @@ class DefaultLayout extends React.Component {
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossOrigin="anonymous"/>
                 </head>
                 <body id="page-top">
-                    <Navigation/>
                     <noscript>You need to enable JavaScript to run this app.</noscript>
                     {this.props.children}
                     <Footer/>

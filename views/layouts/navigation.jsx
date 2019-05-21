@@ -1,5 +1,6 @@
 
  import React, { Component } from 'react';
+import Modal from './modal';
  
  class Navigation extends Component {
      render() {
@@ -27,13 +28,16 @@
                      <a className="nav-link js-scroll-trigger" href="#contact">Liên lạc</a>
                    </li>
                    <li className="nav-item">
-                     <a className="nav-link js-scroll-trigger" href="/login">Đăng nhập</a>
+                     <a className="nav-link js-scroll-trigger" href="/login" >Đăng nhập</a>
+                   </li>
+                   <li className="nav-item">
+                     <a className="nav-link js-scroll-trigger" href="/register" >Đăng ký</a>  
                    </li>
                  </ul>
                </div>
              </div>
            </nav>
-                 
+           
              </div>
          );
      }
