@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body { min-height: 100%; }
+  a { text-decoration: none; }
+  a:hover{text-decoration: none; }
+  .main-header {
+    background: linear-gradient(#6d7fcc, #6660c2);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    text-shadow: #222 0px -1px 1px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+    
+  }
+  .main-header a {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 32px;
+  }
+  
+  .page-wrap {
+    float: right;
+    width: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 100%;
+    /* background: #3B3B3B; */
+    background: #6d7fcc;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+  }
+  .main-nav a {
+    display: block;
+    background: linear-gradient(#6d7fcc, #6660c2);
+    border-top: 1px solid #484848;
+    border-bottom: 1px solid #2E2E2E;
+    color: white;
+    padding: 15px;
+    
+  }
+ 
+  .main-nav a :hover, :focus {
+    background: linear-gradient(#484848, #383838);
+  }
+  .main-nav:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 34px;
+    background: linear-gradient(left, rgba(black, 0), rgba(black, 0.4));
+  }
+  
+  .main-content {
+    padding: 70px 20px 20px 20px;
+  }
+  .open-menu{
+    margin-top: -10px;
+}
+  .close-menu {
+    margin-top: -10px;
+    display: none;
+  }
+  .sidebar-header{
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #6d7fcc;
+  }
+  a[data-toggle="collapse"] {
+    position: relative;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #465391 !important;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-20%);
+}
+  
+  #main-nav:target {
+    width: 20%;
+  }
+  #main-nav:target + .page-wrap {
+    width: 80%;
+  }
+  #main-nav:target + .page-wrap  .open-menu {
+    display: none; 
+ }
+ #main-nav:target + .page-wrap .close-menu {
+    display: block;
+ }
+ #main-nav:target + .page-wrap  .main-header {
+    width: 80%;
+    left: 20%;
+  }
