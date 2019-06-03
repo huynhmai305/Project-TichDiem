@@ -27,7 +27,7 @@ class Contact extends Component {
     render() {
         return (
            
-                <section className="container" id="contact">
+                <section id="contact">
                     {/*<h2 className="mt-4 mb-3">
                         <small></small>
                     </h2>

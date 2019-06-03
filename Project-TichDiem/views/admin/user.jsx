@@ -2,6 +2,13 @@ var React = require('react');
 var Admin = require('../admin');
 var dateFormat = require('dateformat');
 class Users extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    deleteRow() {
+
+    }
     render() {
         return (
             <Admin title="Quản lý khách hàng">
@@ -15,9 +22,8 @@ class Users extends React.Component {
                         </li>
                         <li className="breadcrumb-item active">Quản lý khách hàng</li>
                     </ol>
-
-                    <table className="table table-striped table-inverse table-responsive">
-                        <thead>
+                    <table className="table table-striped table-hover">
+                        <thead className="table-primary">
                             <tr >
                                 <th>#</th>
                                 <th>Name</th>
@@ -25,27 +31,27 @@ class Users extends React.Component {
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Ngày đăng ký</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             {this.props.result.map((item, key) =>
-                                <tr key={key} index={item.key}>
-                                    <td scope="row" name="id">{item.id}</td>
+                                <tr key={key}>
+                                    <td scope="row">{item.id}</td>
                                     <td>{item.username}</td>
                                     <td>{item.address}</td>
                                     <td>{item.phone}</td>
                                     <td>{item.email}</td>
                                     <td>{dateFormat(item.createdAt, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</td>
                                     <td>
-                                        <a name="btnDelete" className="btn btn-danger" href="/admin/user/delete"><i className="fas fa-trash-alt"></i></a>
+                                        <a type="submit" name="btnDelete" className="btn btn-danger"  href={"/admin/user/delete/"+item.id}><i className="fas fa-trash-alt"></i></a>
                                     </td>
-
                                 </tr>
                             )}
                         </tbody>
                     </table>
-                </div>
 
+                </div>
             </Admin>
         );
     }

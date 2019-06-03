@@ -16,8 +16,8 @@ class Stores extends React.Component {
                         <li className="breadcrumb-item active">Quản lý cửa hàng</li>
                     </ol>
 
-                    <table className="table table-striped table-inverse table-responsive">
-                        <thead>
+                    <table className="table table-striped table-responsive table-hover">
+                        <thead className="table-primary">
                             <tr >
                                 <th>#</th>
                                 <th>Name</th>
@@ -25,11 +25,12 @@ class Stores extends React.Component {
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Ngày đăng ký</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             {this.props.result.map((item, key) =>
-                                <tr key={key} index={item.key}>
+                                <tr key={key}>
                                     <td scope="row" name="id">{item.id}</td>
                                     <td>{item.username}</td>
                                     <td>{item.address}</td>
@@ -37,7 +38,7 @@ class Stores extends React.Component {
                                     <td>{item.email}</td>
                                     <td>{dateFormat(item.createdAt, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</td>
                                     <td>
-                                        <a name="btnDelete" className="btn btn-danger" href="/admin/user/delete/:id"><i className="fas fa-trash-alt"></i></a>
+                                        <a name="btnDelete" className="btn btn-danger" href={"/admin/user/delete/"+item.id}><i className="fas fa-trash-alt"></i></a>
                                     </td>
 
                                 </tr>

@@ -21,7 +21,7 @@ class Register extends React.Component {
                                     </div>
                                     <div className="form-group col">
                                         <label htmlFor="Phone">Số điện thoại</label>
-                                        <input type="tel" className="form-control is-valid" id="Phone" name="sdt" placeholder="Số điện thoại" required/>
+                                        <input type="tel" className="form-control is-valid" maxLength={10} id="Phone" name="sdt" placeholder="Số điện thoại" required/>
                                     </div> 
                                 </div>
                                 <div className="form-group">
@@ -51,7 +51,7 @@ class Register extends React.Component {
                                     <div className="invalid-feedback">Vui lòng chọn quyền truy cập</div>
                                 </div>
                                 <input type="submit" className="btn btn-success btn-block" value="ĐĂNG KÝ" id="btnRegister"/>
-                                <a className="btn btn-danger btn-block" href="/">THOÁT</a>
+                                <a className="btn btn-danger btn-block circle" href="/">THOÁT</a>
                             </form>
                         </div>
                     </div>

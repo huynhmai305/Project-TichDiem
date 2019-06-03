@@ -29,7 +29,7 @@ class Navigation extends Component {
                   <a className="nav-link js-scroll-trigger" href="#contact">Liên lạc</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="/login" >Đăng nhập</a>
+                  <a className="nav-link js-scroll-trigger" href="/login" > Đăng nhập <i className="fas fa-sign-in-alt"></i></a>
                 </li>
 
               </ul>

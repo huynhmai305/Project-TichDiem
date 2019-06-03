@@ -17,7 +17,7 @@ class Admin extends React.Component {
                                 <a href="#customerSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><i className="fas fa-users "></i> Quản lý khách hàng</a>
                                 <ul className="collapse list-unstyled" id="customerSubmenu">
                                     <li>
-                                        <a href="/admin/user"><i class="fas fa-list-ul "></i> Danh sách khách hàng</a>
+                                        <a href="/admin/user"><i className="fas fa-list-ul "></i> Danh sách khách hàng</a>
                                     </li>
                                     <li>
                                         <a href="/admin/post"><i className="fas fa-pen-alt"></i> Bài review</a>
@@ -31,30 +31,31 @@ class Admin extends React.Component {
                                 <a href="#storeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle"><i className="fas fa-store"></i> Quản lý cửa hàng</a>
                                 <ul className="collapse list-unstyled" id="storeSubmenu">
                                     <li>
-                                        <a href="/admin/store"><i class="fas fa-list-ul "></i> Danh sách cửa hàng</a>
+                                        <a href="/admin/store"><i className="fas fa-list-ul "></i> Danh sách cửa hàng</a>
                                     </li>
                                     <li>
                                         <a href="/admin/post"><i className="fas fa-pen-alt "></i> Bài viết</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i className="far fa-comment-alt"></i> Bình luận </a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><i class="fas fa-gifts"></i> Quản lý quà đổi thưởng</a>
+                                <a href="#"><i className="fas fa-gifts"></i> Quản lý quà đổi thưởng</a>
+                            </li>
+                            <li>
+                                <a href="/"><i className="fas fa-sign-out-alt"></i> Đăng xuất</a>
                             </li>
                         </ul>
                     </nav>
                     <div className="page-wrap">
-                        <header className="main-header">
+                        <header className="main-header fixed-top">
                             <a href="#main-nav" className="open-menu">
                                 <i class="fa fa-align-justify" aria-hidden="true"></i>
                             </a>
                             <a href="#" className="close-menu">
                                 <i class="fa fa-align-left" aria-hidden="true"></i>
                             </a>
-                            <h1>{this.props.title}</h1>
+                            <h2>{this.props.title}</h2>
                         </header>
                         <div className="main-content">
                             {this.props.children}

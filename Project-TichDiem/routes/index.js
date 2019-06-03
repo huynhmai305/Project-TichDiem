@@ -38,10 +38,10 @@ router.post('/login',(req,res) =>{
           if(bcrypt.compare(pw,result.password)){
               var rs=result[0].role;
               if(rs===1){  
-                res.redirect('admin/user')
+                res.redirect('store')
               }
               else if(rs===2){
-                res.redirect('admin/user')
+                res.redirect('users')
               }
               req.session.id = result[0].id;
           } else {
@@ -135,10 +135,7 @@ router.get('/admin/store',(req,res) => {
   })
   .catch(err => console.log(err))
 })
-// router.param(['id'], function (req, res, next, value) {
-//   console.log('CALLED ONLY ONCE with', value);
-//   next();
-// });
+
 //add user
 // router.get('/admin/user/edit/:id',(req,res) =>{ 
 //   console.log(this.params.id)
@@ -156,16 +153,17 @@ router.get('/admin/store',(req,res) => {
 //       })
 //       .catch(err => console.log(err))
 // })
-router.get('/admin/user/delete', (req,res) => {
+router.get('/admin/user/delete/:id', (req,res) => {
+ 
   //delete from table
     User.destroy({
         where: {
-          id: req.session.id
+          id: req.params.id
         }
       })
       .then(result => {
-        console.log(`Delete complete `);
-        res.render('admin/user')
+        console.log(`Delete completed `);
+        res.redirect('/admin/user')
       })
       .catch(err => console.log(err))
 })
@@ -173,5 +171,13 @@ router.get('/admin/user/delete', (req,res) => {
 router.get('/admin/post',(req,res) => {
   res.render('admin/post')
 })
-
+router.get('/post/add',(req,res) => {
+  res.render('post/AddPost')
+})
+// router.get('/customer',(req,res) => {
+//   res.render('customer/home')
+// })
+router.get('/store',(req,res) => {
+  res.render('store/home')
+})
 module.exports = router;

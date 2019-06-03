@@ -26,6 +26,7 @@ class DefaultLayout extends React.Component {
                     <script src="/javascripts/js/jqBootstrapValidation.js"/>
                     <script src="/javascripts/js/contact_me.js"/>
                     <script src="/javascripts/babel/babel.min.js"/>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
                     <link rel="stylesheet" href="/stylesheets/font-awesome.min.css"/>
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossOrigin="anonymous"/>
                 </head>
